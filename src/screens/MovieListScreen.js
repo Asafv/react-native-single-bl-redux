@@ -12,7 +12,7 @@ const MovieListScreen = ({ navigation }) => {
   const [term, setTerm] = useState('');
   const movies = useSelector(({ search: { shows } }) => shows);
   const dispatcher = useDispatch();
-  
+
   const handleSearchTermChange = (query) => {
     setTerm(query);
     dispatcher(userTyping({ query }));

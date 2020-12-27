@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  View, Text, Image, StyleSheet, useWindowDimensions, ActivityIndicator, ScrollView
+  View, Image, StyleSheet, useWindowDimensions, ActivityIndicator, ScrollView
 } from 'react-native';
 import { useSelector } from 'react-redux';
 import _ from 'lodash';
@@ -12,7 +12,6 @@ const MovieDetails = ({ navigation, route }) => {
   const movieDetails = useSelector(({ showInfo: { info } }) => info);
   const contentWidth = useWindowDimensions().width;
 
-  const title = _.get(movieDetails, 'name');
   const imageUri = _.get(movieDetails, 'image.medium');
   const officialSite = _.get(movieDetails, 'officialSite');
   const summary = _.get(movieDetails, 'summary');
