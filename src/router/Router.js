@@ -20,7 +20,7 @@ const Router = () => {
           name="MovieList"
           component={MovieListScreen}
           options={{
-            title: 'Movies List',
+            title: 'Shows List',
             headerStyle: {
               backgroundColor: 'black',
             },
